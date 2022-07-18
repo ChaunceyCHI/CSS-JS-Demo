@@ -1,0 +1,54 @@
+body{
+    background-color: aqua;
+    /*左右居中*/
+    justify-content: center;
+    /*上下居中*/
+    align-items: center;
+    /*弹性布局*/
+    display: flex;
+    /*100%窗口高度*/
+    height: 100vh;
+    margin: 0;
+}
+
+.card-container{
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    display: flex;
+    /*布局内部的子控件排列方式是纵向排列*/
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-banner{
+    background-color: orange;
+    flex: 1;
+}
+
+.card-info{
+    flex:1;
+    border-bottom: 1px solid rgb(212,212,212);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 100px;
+    /*边框变圆*/
+    border-radius: 50%;
+}
+.card-stats{
+    flex: 0.7;
+    display: flex;
+}
+.category{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
