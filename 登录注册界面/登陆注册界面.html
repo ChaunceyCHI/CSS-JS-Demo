@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆注册界面</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./assets/iconfont/iconfont.css">
+    <script src="./index.js"></script>
+</head>
+<body>
+<div class="container" id="container">
+    <div class="form-container sign-up-container">
+<!--        注册-->
+        <form action="#">
+            <h1>用户注册</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="iconfont icon-qq"></i></a>
+                <a href="#" class="social"><i class="iconfont icon-weixin"></i></a>
+                <a href="#" class="social"><i class="iconfont icon-weibo-copy"></i></a>
+                <a href="#" class="social"><i class="iconfont icon-github"></i></a>
+            </div>
+            <span>您可以选择以上几种方式注册一个您的账户</span>
+            <input type="text" placeholder="用户名">
+            <input type="password" placeholder="密码">
+            <input type="email" placeholder="邮箱">
+            <button id="send_code">发送验证码</button>
+            <input type="text" placeholder="验证码">
+        </form>
+    </div>
+    <div class="form-container sing-in-container">
+<!--        登录-->
+        <form action="#">
+            <h1>用户登录</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="iconfont icon-qq"></i></a>
+                <a href="#" class="social"><i class="iconfont icon-weixin"></i></a>
+                <a href="#" class="social"><i class="iconfont icon-weibo-copy"></i></a>
+                <a href="#" class="social"><i class="iconfont icon-github"></i></a>
+            </div>
+            <span>您可以选择以上几种方式登录一个您的账户</span>
+            <input type="text" placeholder="用户名">
+            <input type="password" placeholder="密码">
+            <a href="#">忘记密码？</a>
+            <button>登录</button>
+        </form>
+    </div>
+<!--    侧边栏内容-->
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panner overlay-left">
+                <h1>已有账号?</h1>
+                <p>亲爱的快快点我去进行登录吧</p>
+                <button class="ghost" id="ghost">登录</button>
+            </div>
+            <div class="overlay-panner overlay-right">
+                <h1>没有账号?</h1>
+                <p>点击注册去注册一个属于你的账号吧。</p>
+                <button class="ghost" id="ghost">注册</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
