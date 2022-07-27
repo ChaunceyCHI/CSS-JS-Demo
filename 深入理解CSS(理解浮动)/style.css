@@ -1,0 +1,55 @@
+:root{
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after{
+    box-sizing: inherit;
+}
+
+body{
+    background-color: #eee;
+    font-family: Helvetica,Arial,sans-serif;
+}
+
+body *+*{
+    margin-top: 1.5rem;
+}
+
+header {
+    padding:1em 1.5rem;
+    color:#fff;
+    background-color: #0072b0;
+    border-radius: .5em;
+    margin-bottom: 1.5em;
+}
+
+.main {
+    padding: 0 1.5em;
+    background-color: #fff;
+    border-radius: .5em;
+}
+
+/*双容器*/
+.container{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+/*此处body为外层容器，通过设置内层容器的最大宽度使得内层容器在外层容器中居中，这种方式被称为双容器模式*/
+
+/*让四个媒体盒子浮动到左侧*/
+/*浮动设计的高度并不会添加到父元素上，换言之，设置了浮动属性的元素就不会撑大父元素*/
+.media{
+    float: left;
+    width: 50%;
+    padding: 1.5em;
+    background-color: #eeeeee;
+    border-radius: 0.5em;
+}
+/*用清除浮动来使得父元素包含浮动元素*/
+.clearfix::after{
+    display:block;
+    content:" ";//这里可以添加一个空格，以解决旧版Opera浏览器的兼容性。
+    clear:both;
+}
