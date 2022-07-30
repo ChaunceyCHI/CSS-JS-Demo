@@ -42,14 +42,40 @@ header {
 /*浮动设计的高度并不会添加到父元素上，换言之，设置了浮动属性的元素就不会撑大父元素*/
 .media{
     float: left;
-    width: 50%;
+    /*给每个媒体元素添加右侧和底部的外边距*/
+    margin:0 1.5em 1.5em 0 ;
+    /*从宽度里减去外边距，防止不必要的换行*/
+    width: calc(50% - 1.5em);
     padding: 1.5em;
     background-color: #eeeeee;
     border-radius: 0.5em;
 }
 /*用清除浮动来使得父元素包含浮动元素*/
+.clearfix::before ,
 .clearfix::after{
-    display:block;
+    display:table;
     content:" ";//这里可以添加一个空格，以解决旧版Opera浏览器的兼容性。
+}
+
+.clearfix::after{
     clear:both;
+}
+/*清除每行上面的一个元素的浮动*/
+.media:nth-child(odd){
+    clear:left;
+}
+
+/*将图片浮动到左侧*/
+.media-image{
+    float: left;
+    margin-right: 1.5rem;
+}
+/*删除猫头鹰选择器所添加的顶部外边距*/
+.media-body{
+    margin-top: 0;
+    overflow: auto;
+}
+/*覆盖用户代理样式所添加的顶部外边距*/
+.media-body h4{
+    margin-top: 0;
 }
